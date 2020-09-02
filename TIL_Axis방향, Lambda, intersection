@@ -7,3 +7,11 @@ df3 = pd.DataFrame({
 })
 df3
 lambda x : x.max() - x.min(), axis = 0 #lambda 인수:인수 표현식, axis = 0 by solumns, axis =1 by rows
+
+#set- intersection& / union| / difference-
+https://wikidocs.net/1015#_3
+s1 = set([1, 2, 3, 4, 5, 6])
+s2 = set([4, 5, 6, 7, 8, 9])
+s1 & s2 #{4, 5, 6}
+아니면 
+sl.intersection(s2) 도 ㅇㅋ
