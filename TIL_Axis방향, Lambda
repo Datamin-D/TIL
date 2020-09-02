@@ -1,0 +1,9 @@
+# 1.Axis 방향, 2. lambda
+#예시
+df3 = pd.DataFrame({
+    'A': [1, 3, 4, 3, 4],
+    'B': [2, 3, 1, 2, 3],
+    'C': [1, 5, 2, 4, 4]
+})
+df3
+lambda x : x.max() - x.min(), axis = 0 #lambda 인수:인수 표현식, axis = 0 by solumns, axis =1 by rows
