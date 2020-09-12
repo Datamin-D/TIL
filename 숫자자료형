@@ -1,0 +1,4 @@
+int() 파이썬에서는 int(plain integers): 정수 4바이트(32비트)로 지정됨.
+long() 더 큰범위 하고싶으면 long()쓰면됨. 메모리한계까지 저장가능.
+float() 실수
+complex() 복소수
