@@ -1,0 +1,15 @@
+#select다루는법
+select는 컨테이너
+url = "웹페이지 주소"
+raw = requests.get(url,
+                  headers={'User-Agent':'Mozilla/5.0'}) #우회 접속 "저 크롤러아님! 불여시임!"  
+html = BeautifulSoup(raw.text, "html.parser") #파싱. 위에는 걍 텍스트를 뽑아왔다면 여기서는 <html 어쩌구>를 의미있는 단위로 인식.
+
+#select, select_one
+movie_list = html.select("태그") 하면 태그에 해당하는 태그값을 리스트로 받음
+for i in movie_list:
+  movie_title = movie.select_one("a").text
+
+select_one은 select로 받은 리스트 안에 있는 태그를 접근하게 해줌.
+
+그런데!!! 더 접근할 필요없다? >> 셀렉트로 만든 리스트에서 인덱싱해다가 써도 됨.
