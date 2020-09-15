@@ -1,4 +1,4 @@
-#select다루는법
+#1. select다루는법
 select는 컨테이너
 url = "웹페이지 주소"
 raw = requests.get(url,
@@ -13,3 +13,8 @@ for i in movie_list:
 select_one은 select로 받은 리스트 안에 있는 태그를 접근하게 해줌.
 
 그런데!!! 더 접근할 필요없다? >> 셀렉트로 만든 리스트에서 인덱싱해다가 써도 됨.
+
+
+#2. nth-child & nth-of-type차이
+nth-child는 자식들 전체중에. nth-of-type은 자식들중 특정한 타입에대해 접근.
+https://firerope.tistory.com/5 참고
