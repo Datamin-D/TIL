@@ -28,3 +28,12 @@ url = "https://www.the-numbers.com/market/" + "2019" + "/top-grossing-movies" #*
 raw = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
 raw.encoding = 'utf-8' #*raw.encoding = 'utf-8' 해주면 됨
 html = BeautifulSoup(raw.text, "html.parser")
+
+#4.StaleElementReferenceException 이 일어난다?
+문서 참조를 이상한데 해서 그런다함. 이런경우 초기화시켜줘보자.
+변수.click()
+1. wd.get(url)다시
+2. 변수 초기화 (변수의 css_selector 태그 다시 적어주기)
+아래 참고
+
+https://velog.io/@matisse/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%A7%81#--solution-1
