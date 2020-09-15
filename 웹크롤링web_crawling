@@ -16,5 +16,7 @@ select_one은 select로 받은 리스트 안에 있는 태그를 접근하게 �
 
 
 #2. nth-child & nth-of-type차이
+nth-child쓰면 가끔 오류남. 이유는 모르겠슴..
+
 nth-child는 자식들 전체중에. nth-of-type은 자식들중 특정한 타입에대해 접근.
 https://firerope.tistory.com/5 참고
