@@ -20,3 +20,11 @@ nth-child쓰면 가끔 오류남. 이유는 모르겠슴..
 
 nth-child는 자식들 전체중에. nth-of-type은 자식들중 특정한 타입에대해 접근.
 https://firerope.tistory.com/5 참고
+
+#3. 웹크롤링 시 글씨가 깨진다? broken words?
+--> raw.encoding = 'utf-8'해주면 됨.
+
+url = "https://www.the-numbers.com/market/" + "2019" + "/top-grossing-movies" #**2019 >> years for문으로
+raw = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+raw.encoding = 'utf-8' #*raw.encoding = 'utf-8' 해주면 됨
+html = BeautifulSoup(raw.text, "html.parser")
