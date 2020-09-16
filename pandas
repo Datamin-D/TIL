@@ -1,0 +1,6 @@
+#1. map함수 쓰는법
+df['column'].map(lambda x: x 에 할 연산)
+e.g.
+#빈 리스트인지 확인
+df['Genre'].map(lambda x : x == "[]") 
+하면 series 값 별로 lambda함수를 연산해줌.
