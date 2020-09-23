@@ -37,3 +37,11 @@ html = BeautifulSoup(raw.text, "html.parser")
 아래 참고
 
 https://velog.io/@matisse/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%A7%81#--solution-1
+
+#4. element .click()이 안된다?
+wd.find_elements_by_css_selector("selector").click()이 안되면서
+ElementClickInterceptedException: Message: element click intercepted: 이런 오류 메세지가 뜸.
+wd.find_elements_by_css_selector("selector").send_keys(Keys.ENTER)
+시도 해보니까 된다!
+출처:
+https://wkdtjsgur100.github.io/selenium-does-not-work-to-click/
