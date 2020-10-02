@@ -1,0 +1,9 @@
+1. 원핫인코딩
+#from tensorflow.keras.utils import np_utils
+
+# Y_train = tf.keras.np_utils.to_categorical(Y_class_train,10)
+# Y_test = tf.keras.np_utils.to_categorical(Y_class_test,10)
+#위 방식 tf.keras.np_utils.to_categorical 안씀!!이제는 간단히 to_categorical이라 씀.
+from keras.utils import to_categorical 
+Y_train = to_categorical(Y_train, num_classes=10)
+Y_test = to_categorical(Y_test, num_classes=10)
