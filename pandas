@@ -17,3 +17,5 @@ first argument must be an iterable of pandas objects, you passed an object of ty
   
 #3. 열 삭제 df.drop()
 df.drop(['컬럼1','컬럼2'],axis = 1) #axis 지정안해주면 컬럼 못찾겠다 에러날 수도.  
+#이대로 놓는다고 df가 변하지는 않음.
+df = df.drop(['컬럼1','컬럼2'],axis = 1) #까지 해줘야 함.
