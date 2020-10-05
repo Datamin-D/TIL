@@ -1,0 +1,13 @@
+import seaborn as sns
+
+1. barplot, countplot의 차이
+#countplot
+sns.countplot(data = 'df', x = '칼럼이름', hue = '칼럼이름')
+#x축,색 지정해주면 y축에는 데이터의 갯수를 세어줌.--> y축은 고정. 따로 칼럼 언급 안됨. 데이터 수 세는거라.
+#classification에서 자주 
+
+#barplot
+sns.barplot(data = , x = , y = ,hue = )
+#regression문제에서 자주 쓰임
+
+#출처 https://brunch.co.kr/@jjason68/12
