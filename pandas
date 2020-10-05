@@ -4,3 +4,8 @@ e.g.
 #빈 리스트인지 확인
 df['Genre'].map(lambda x : x == "[]") 
 하면 series 값 별로 lambda함수를 연산해줌.
+
+#2. DataFrame합치는 pd.concat()
+#axis 방향
+pd.concat(df1,df2,axis = 1) #옆으로 붙임
+pd.concat(df1,df2,axis = 0) #밑에다 붙임.
