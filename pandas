@@ -9,3 +9,8 @@ df['Genre'].map(lambda x : x == "[]")
 #axis 방향
 pd.concat(df1,df2,axis = 1) #옆으로 붙임
 pd.concat(df1,df2,axis = 0) #밑에다 붙임.
+first argument must be an iterable of pandas objects, you passed an object of type "DataFrame" 이 뜰것. 리스트로 넣어줘야하기 때문.
+
+#맞는 코드
+pd.concat([df1,df2],axis = 1) #옆으로 붙임
+pd.concat([df1,df2],axis = 0) #밑에다 붙임.
