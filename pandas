@@ -16,7 +16,12 @@ first argument must be an iterable of pandas objects, you passed an object of ty
   pd.concat([df1,df2],axis = 0) #밑에다 붙임.
 
 # * pd.concat([],axis = 1)로 합칠 때 합치는 기준은 index임.  
-# 물론 pd.concat([df1,df2],ignore_index = True,axis = 1) 옵션을 주면 
+# 물론 pd.concat([df1,df2],ignore_index = True,axis = 1) 옵션을 주면 말그대로 옆으로 그냥 갖다붙임. 그러나 컬럼 이름이 0,1,2,..로 변해버림
+# = pd.concat([df_5, df_6], keys=['df_5', 'df_6'], names=['df_name', 'row_number']) 같이 names = 를 통해 컬럼 이름을 주면 됨.
+
+
+
+출처: https://rfriend.tistory.com/256 [R, Python 분석과 프로그래밍의 친구 (by R Friend)]
 
 
 #3. 열 삭제 df.drop()
