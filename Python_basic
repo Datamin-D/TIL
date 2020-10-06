@@ -1,0 +1,6 @@
+1. sorted
+#tuple에다가 해보기
+sorted((3,2,1))#하면 정렬하여 리스트로 반환. [1,2,3]
+
+[출처] https://blog.naver.com/timtaeil/221426580068
+
