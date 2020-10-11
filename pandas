@@ -37,5 +37,5 @@ len(df[df['Label'] == 'Benign']) 이렇게 len으로  특정 컬럼('Label')의 
 
 6. 판다스 inplace의 의미
 inplace 옵션에 True를 주면 또 다른 객체를 반환하지 않고 기존 객체를 수정 (ex. df.fillna(inplace=True) )
-
+즉, 다시 df = 내가 원한 연산 이런거 안해줘도 됨.
 출처: https://sacko.tistory.com/18 [데이터 분석하는 문과생, 싸코]
