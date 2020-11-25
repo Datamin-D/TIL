@@ -1,2 +1,20 @@
 #SQL
-SELECT column FROM table
+
+1. SELECT
+SELECT column FROM table;
+
+2. 자료 갯수 세기
+
+SELECT COUNT(*) FROM 테이블;
+#row 다셈
+
+SELECT COL1,COL2, FROM TABLE
+
+SELECT * 
+FROM table
+WHERE 
+
+3. 자료 정렬
+SELECT *
+FROM TABLE
+WHERE COL1 >= '2010-01-01' AND COL1 <= '20'
