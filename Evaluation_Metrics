@@ -1,4 +1,12 @@
-# For Regression
+# 1.For Regression
+# R2,adjR2, mae, mse, rmse, rmsle(추가 예정.)
+# rmsle는 과소평가된것에 패널티 더 줌.
+# 
+# 
+
+# RMLSLE도 추가한 버젼
+from sklearn.metrics import make_scorer
+
 # r2 sklearn꺼로 수정해서 다시 구현, mape sklearn꺼는 안됨. 없음. --> 수정, r2 squared 추가
 
 def metrics(model,x_train,y_train,x_test,y_test,train_pred,test_pred):
@@ -66,5 +74,13 @@ def metrics(model,x_train,y_train,x_test,y_test,train_pred,test_pred):
   # print("test set score(MPE):", MPE(y_test,test_pred),"%") 
 
 
+
+  def rmsle(y_pred, y_test) : 
+    assert len(y_test) == len(y_pred)
+    return np.sqrt(np.mean((np.log(1+y_pred) - np.log(1+y_test))**2)) 
+  print("train set score(RMSLE):",rmsle(train_pred,y_train))
+  print("test set score(RMSLE):",rmsle(test_pred, y_test))  
+
 #   #lr.score 코알라 참조 https://book.coalastudy.com/data-science-lv1/week5/stage3
 #   #나머진 https://partrita.github.io/posts/regression-error/ 참조
+# RMSLE 는 https://www.kaggle.com/marknagelberg/rmsle-function 참조
