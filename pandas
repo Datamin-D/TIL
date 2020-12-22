@@ -48,3 +48,15 @@ https://www.delftstack.com/ko/howto/python-pandas/how-to-add-one-row-to-pandas-d
 
 8. df에서 index를 새로운 컬럼으로 만들기.
 df.reset_index() #하면됨.
+
+9. def안에서 df를 어쩔 수 없이 할당해야될때.
+
+def scale_log(col_name):
+  global df 
+  # 밑에 drop을 사용하려면 필연적으로 df = 식 처럼 df에 할당해줘야함. 그런데 그러면 def에서 전역/지역변수 문제 발생.def안에 변수를 할당시키면 지역변수로 생각하기 때문.
+  # global 해주면 말끔히 해결.
+  
+  log_col_name = 'log_' + col_name
+  df[log_col_name] = df[col_name].apply(lambda x: np.log(x))
+  df = df.drop(col_name, axis = 1) #이거때매그럼.
+  return df[log_col_name]
