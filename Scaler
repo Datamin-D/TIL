@@ -11,3 +11,5 @@ x_test['Min_Max_Opening Weekend sales'] = df_scaled['Opening Weekend sales']
 
 x_test = x_test.drop(['Opening Weekend sales'],axis = 1)
 x_test
+# 좋은 컬럼
+#https://towardsdatascience.com/everything-you-need-to-know-about-min-max-normalization-in-python-b79592732b79
