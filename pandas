@@ -40,16 +40,16 @@ inplace 옵션에 True를 주면 또 다른 객체를 반환하지 않고 기존
 즉, 다시 df = 내가 원한 연산 이런거 안해줘도 됨.
 출처: https://sacko.tistory.com/18 [데이터 분석하는 문과생, 싸코]
 
-7. Df에 새로운 행 추가.
+#7. Df에 새로운 행 추가.
 팬더는 완전히 채워진 ‘데이터 프레임’을로드하도록 설계되었습니다.
 그치만 append()메소로 사전의 값을 행으로 직접 가져 와서 팬더dataframe에 추가 할 수 있습니다.
 df = df.append({'컬럼':값},colimns = [],ignore_index = True)
 https://www.delftstack.com/ko/howto/python-pandas/how-to-add-one-row-to-pandas-dataframe/
 
-8. df에서 index를 새로운 컬럼으로 만들기.
+#8. df에서 index를 새로운 컬럼으로 만들기.
 df.reset_index() #하면됨.
 
-9. def안에서 df를 어쩔 수 없이 할당해야될때.
+#9. def안에서 df를 어쩔 수 없이 할당해야될때.
 
 def scale_log(col_name):
   global df 
@@ -60,3 +60,7 @@ def scale_log(col_name):
   df[log_col_name] = df[col_name].apply(lambda x: np.log(x))
   df = df.drop(col_name, axis = 1) #이거때매그럼.
   return df[log_col_name]
+
+#10. df에 = 으로 할당시 주의점.
+df1[['new_col'] = df2['col'] 하면 concat처럼 눈에보이는 순서를 간직하고 붙는게 아닌, index에 맞게 붙음. 따라서 그냥 = 로 할당해주면 안됨.
+df1.reset_index() 활용.
