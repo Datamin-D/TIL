@@ -1,0 +1,13 @@
+#1. Min_Max_Scaler
+#example
+# x_test minmax scaling
+scaler = MinMaxScaler()
+scaled = scaler.fit_transform(x_test) #dataframe을 input으로 받고 array를 반환함.
+
+df_scaled = pd.DataFrame(data = scaled, columns = x_test.columns)
+df_scaled
+x_test.reset_index(drop = True, inplace = True) #해줘야 밑에 수식 제대로 작동.
+x_test['Min_Max_Opening Weekend sales'] = df_scaled['Opening Weekend sales'] 
+
+x_test = x_test.drop(['Opening Weekend sales'],axis = 1)
+x_test
