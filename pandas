@@ -70,3 +70,15 @@ df.sum() #세로별합
 df.sum(axis = 0) # 세로합
 
 df.sum(axis = 1) #가로합
+
+#12. datetime, 시간 정보 전처리.
+df = pd.DataFrame([20201101025616])
+pd.to_datetime(df['해당컬럼'],format ='%Y%m%d%H%M%S') # format으로 형태를 지정해줄 수 있음.
+
+df = pd.DataFrame({'Birth':['2019-01-01 09:10:00']}) #이런형태라면 아래처럼
+df['Birth'] = pd.to_datetime(df['Birth'], format='%Y-%m-%d %H:%M:%S', errors='raise')
+
+
+#참고
+#https://m.blog.naver.com/PostView.nhn?blogId=wideeyed&logNo=221603462366&proxyReferer=https:%2F%2Fwww.google.com%2F
+
