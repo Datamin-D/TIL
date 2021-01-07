@@ -1,5 +1,5 @@
 #1. map함수 쓰는법
-df['column'].map(lambda x: x 에 할 연산)
+df['column'].map(lambda x: x 에 할 연산) #column지정안하면 이상하게 나올 수 있음. series 용이라.
 e.g.
 #빈 리스트인지 확인
 df['Genre'].map(lambda x : x == "[]") 
