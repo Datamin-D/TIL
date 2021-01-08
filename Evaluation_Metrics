@@ -84,3 +84,9 @@ def metrics(model,x_train,y_train,x_test,y_test,train_pred,test_pred):
 #   #lr.score 코알라 참조 https://book.coalastudy.com/data-science-lv1/week5/stage3
 #   #나머진 https://partrita.github.io/posts/regression-error/ 참조
 # RMSLE 는 https://www.kaggle.com/marknagelberg/rmsle-function 참조
+
+2. For classification
+
+#ROC curve ==> AUC
+#FP rate에 대비하여 TP비율이 얼마나 되는지 알아보는것.
+DSschool자료 참조.
