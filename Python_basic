@@ -24,3 +24,8 @@ print("%02d.%03d.%04d"%(a,b,c))
 #3. 프린트 줄바꿈 없애기
 print("gucci",end = '')
 print("gang")
+
+#4. regular expression 정규표현식
+
+  #1) 한글 정규표현식 import re
+  re.match('[가-힣]+','나은')
