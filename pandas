@@ -81,6 +81,9 @@ df['Birth'] = pd.to_datetime(df['Birth'], format='%Y-%m-%d %H:%M:%S', errors='ra
 #13. pandas 행 개수 세기
 len(Series) #하면 간단히 세기 가능.
 
+#14. merge 
+pd.merge(df_left,df_right,on = 'col name',how = 'inner'/'outer/left/right')
+
 #참고
 #https://m.blog.naver.com/PostView.nhn?blogId=wideeyed&logNo=221603462366&proxyReferer=https:%2F%2Fwww.google.com%2F
 
