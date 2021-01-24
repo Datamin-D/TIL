@@ -3,3 +3,14 @@
   # np.where(조건) : 조건을 만족하는 값의 인덱스를 반환한다. 
 #예제 ndarray에서 음수가 나오면 0으로 값 바꾸기
 np.where(x < 0 , 0 ,x) # 여기서 x는 변수 x의 각 원소. 참일때, 거짓일 때 값 다 줘야함. np.where(x<0,참일때 0반환, 거짓이면 x그대로 반환.)
+
+#2. numpy.random.3가지
+np.random.randint(6) # 0~5까지 랜덤한 int하나
+np.random.rnadint(2,6) # 2~5까지 랜덤 int하나
+
+np.random.rand(m,n) #0~1 균일 분포. 표준정규분포 난수를 생성.
+np.random.rand(6)
+np.random.rand(3,2)
+
+np.random.randn(6)
+np.random.randn(2,3)
