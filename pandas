@@ -78,12 +78,15 @@ pd.to_datetime(df['해당컬럼'],format ='%Y%m%d%H%M%S') # format으로 형태�
 df = pd.DataFrame({'Birth':['2019-01-01 09:10:00']}) #이런형태라면 아래처럼
 df['Birth'] = pd.to_datetime(df['Birth'], format='%Y-%m-%d %H:%M:%S', errors='raise')
 
+#참고
+#https://m.blog.naver.com/PostView.nhn?blogId=wideeyed&logNo=221603462366&proxyReferer=https:%2F%2Fwww.google.com%2F
+
 #13. pandas 행 개수 세기
 len(Series) #하면 간단히 세기 가능.
 
 #14. merge 
 pd.merge(df_left,df_right,on = 'col name',how = 'inner'/'outer/left/right')
 
-#참고
-#https://m.blog.naver.com/PostView.nhn?blogId=wideeyed&logNo=221603462366&proxyReferer=https:%2F%2Fwww.google.com%2F
-
+#15. apply로 여러 컬럼 값 바꾸기
+df['NewCol'] = df.apply(lambda x: segmentMatch(x['TimeCol'], x['ResponseCol']), axis=1)
+#이런식으로 df.apply(lambda x: func(x['col1']x['col2']),axis = 1) 로 넣으면 됨. axis = 1 은 row 별로 돈다는 뜻. 
