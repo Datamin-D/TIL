@@ -90,3 +90,8 @@ pd.merge(df_left,df_right,on = 'col name',how = 'inner'/'outer/left/right')
 #15. apply로 여러 컬럼 값 바꾸기
 df['NewCol'] = df.apply(lambda x: segmentMatch(x['TimeCol'], x['ResponseCol']), axis=1)
 #이런식으로 df.apply(lambda x: func(x['col1']x['col2']),axis = 1) 로 넣으면 됨. axis = 1 은 row 별로 돈다는 뜻. 
+
+#apply with 하나의 컬럼.
+#내가 익숙했던 apply, lambda는 아래와 같았다.
+df['new col'] = df['col'].apply(lambda x: func(x)) # 하면 df에서 col의 row를 돌며 func를 적용함. 
+#그런데! #15와같이 쓸떄 axis 의 default 는 axis = 0 임. 열별로 도는 것. 따라서 조심해야함. 
