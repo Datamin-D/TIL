@@ -18,4 +18,7 @@ np.random.randn(2,3)
 # + np.random.uniform #균등 분포로부터 무작위 표본 추출
 #np.random.uniform(low=0.0, high=10.0, size=100)
 
+#3. matmul,dot
+np.dot은 내적.
+np.matmul은 행렬곱
 
