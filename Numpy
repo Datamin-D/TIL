@@ -50,3 +50,10 @@ b = a
 >>> id(b[0])
 4396116040 #a의 원소와는 id 같음.
 #--> 깊은복사하면 해결됨
+
+# 7. data 섞기 using np.random.permutation(숫자), np.random.shuffles(변수)
+# permutation은 0 ~ 숫자-1 까지 무작위 순서 생성.
+# shuffle은 array를 셔플해서 INPLACE를 한다. : array 자체가 변함)
+
+
+#참고 https://medium.com/@shistory02/numpy-permutation-vs-shuffle-34fe56f0c246
