@@ -25,3 +25,5 @@ np.matmul은 행렬곱
 #4. np.repeat(~를,~번만큼,axis = 0,1 방향으로 복제) array복제
 x = np.random.rand(1,8)
 y = np.repeat(x,7,axis = 0)
+
+#5. np.sum(연산할놈, axis = 0,1방향으로. ,keepdims = True,False) # keepdims하면sum하면서도 dimension이 바뀌지 않음.
