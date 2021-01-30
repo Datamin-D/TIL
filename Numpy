@@ -22,9 +22,10 @@ np.random.randn(2,3)
 a = ['라면','볶음밥','고구마']
 np.random.choice(a) 
 
- #np.random.choice(숫자,몇개 뽑을지,replace = True면 복원추출)
+ #np.random.choice(숫자도 가능, size = 몇개 뽑을지, replace = True면 복원추출, p = [0.1,0.2,0.8,0.1]같은 확률 분포)
  np.random.choice(10,3) #[0,1,2,....,9] 중에서 3개 추출됨.
-
+ 
+ 
 #3. matmul,dot
 np.dot은 내적.
 np.matmul은 행렬곱
