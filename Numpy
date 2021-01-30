@@ -4,7 +4,7 @@
 #예제 ndarray에서 음수가 나오면 0으로 값 바꾸기
 np.where(x < 0 , 0 ,x) # 여기서 x는 변수 x의 각 원소. 참일때, 거짓일 때 값 다 줘야함. np.where(x<0,참일때 0반환, 거짓이면 x그대로 반환.)
 
-#2. numpy.random.3가지
+#2. numpy.random. 숫자뽑기3가지
 np.random.randint(6) # 0~5까지 랜덤한 int하나
 np.random.rnadint(2,6) # 2~5까지 랜덤 int하나
 
@@ -17,6 +17,13 @@ np.random.randn(2,3)
 
 # + np.random.uniform #균등 분포로부터 무작위 표본 추출
 #np.random.uniform(low=0.0, high=10.0, size=100)
+
+# + np.random.choice(리스트 등) :
+a = ['라면','볶음밥','고구마']
+np.random.choice(a) 
+
+ #np.random.choice(숫자,몇개 뽑을지,replace = True면 복원추출)
+ np.random.choice(10,3) #[0,1,2,....,9] 중에서 3개 추출됨.
 
 #3. matmul,dot
 np.dot은 내적.
