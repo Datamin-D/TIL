@@ -108,3 +108,6 @@ keep='first' : 동등한 값이 있다면 제일 먼저 나온 값을 보여준�
 #데이터프레임.nlargest(n, columns, keep='first')
 
 데이터프레임의 경우 우선 순위에 따라 컬럼을 명시해 줄 수 있다.
+
+#16 df.isin() #여러개 bool, 색인 쓰고싶으면 df.isin([원소1,원소2])활용!
+df.isin(Series) #series도 들어가기 가능
