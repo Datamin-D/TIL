@@ -95,3 +95,16 @@ df['NewCol'] = df.apply(lambda x: segmentMatch(x['TimeCol'], x['ResponseCol']), 
 #내가 익숙했던 apply, lambda는 아래와 같았다.
 df['new col'] = df['col'].apply(lambda x: func(x)) # 하면 df에서 col의 row를 돌며 func를 적용함. 
 #그런데! #15와같이 쓸떄 axis 의 default 는 axis = 0 임. 열별로 도는 것. 따라서 조심해야함. 
+
+#16 상위 값 몇개 뽑기. max
+
+#시리즈.nlargest(n, keep='first')
+
+n : 상위 몇개까지 나타낼 것인가
+keep='first' : 동등한 값이 있다면 제일 먼저 나온 값을 보여준다.
+
+시리즈의 경우엔 컬럼을 명시할 필요 없다.
+
+#데이터프레임.nlargest(n, columns, keep='first')
+
+데이터프레임의 경우 우선 순위에 따라 컬럼을 명시해 줄 수 있다.
