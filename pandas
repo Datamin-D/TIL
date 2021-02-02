@@ -114,3 +114,27 @@ keep='first' : 동등한 값이 있다면 제일 먼저 나온 값을 보여준�
 
 #16 df.isin() #여러개 bool, 색인 쓰고싶으면 df.isin([원소1,원소2])활용!
 df.isin(Series) #series도 들어가기 가능
+
+#17 pandas boolean 다루기
+df
+>>
+  0
+0	False
+1	False
+2	False
+3	False
+4	False
+...	...
+4732	False
+4733	False
+4734	False
+4735	False
+4736	False
+4737 rows × 1 columns
+이거로 다른 df에서 True인 레코드만 뽑아내기불가.
+이유: Series가 아님. 위에 타입은 dataframe임. 
+0	NaN
+1	NaN
+2	NaN
+..
+막 이렇게 뜰것.
