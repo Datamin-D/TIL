@@ -1,0 +1,21 @@
+
+#. regular expression 정규표현식
+
+  #1 한글 정규표현식 import re
+  re.match('[가-힣]+','나은') #모든 한글-->'[가-힣]'
+  
+  #2 특수문자 판단
+  re.match('[특수문자]') #re.match('\특수문자')와 달리 []안에 특수문자 넣을때는 \안해줘도 알아들음. 오류나면 \붙여주셈.
+  
+  #3. 일반적인 사용 패턴
+  
+p = re.compile(정규표현식)
+m = p.match( 'string goes here' )
+if m:
+    print('Match found: ', m.group())
+else:
+    print('No match')
+    
+#4. pandas에서 사용하는 정규표현식
+df.col.str.extract('정규표현식 패턴') 쓰면 패턴에 맞는 문자만 남김.
+# df.col.str.extract('(\d*)')
