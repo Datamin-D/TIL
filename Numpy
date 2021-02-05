@@ -34,6 +34,9 @@ np.matmul은 행렬곱
 x = np.random.rand(1,8)
 y = np.repeat(x,7,axis = 0)
 
+
+    
+
 #5. np.sum(연산할놈, axis = 0,1방향으로. ,keepdims = True,False) # keepdims하면sum하면서도 dimension이 바뀌지 않음.
 
 #6. 깊은복사, 얕은복사
@@ -63,5 +66,44 @@ b = a
 # permutation은 0 ~ 숫자-1 까지 무작위 순서 생성.
 # shuffle은 array를 셔플해서 INPLACE를 한다. : array 자체가 변함)
 
-
 #참고 https://medium.com/@shistory02/numpy-permutation-vs-shuffle-34fe56f0c246
+
+# 8. np.hstack : horizontal하게 합치기. 옆으로.
+# np.vstack은 vertical하게 합치기. 수직으로
+
+a = np.array([[4],
+          [5],
+          [6]])
+b  = np.array([[1],
+               [2],
+               [3]])
+a.shape
+b.shape
+
+np.hstack((b,a))
+>>>
+
+import numpy as np
+a = np.array([[4],
+          [5],
+          [6]])
+b  = np.array([[1],
+               [2],
+               [3]])
+a.shape
+b.shape
+
+np.hstack((b,a))
+>>>
+array([[1, 4],
+       [2, 5],
+       [3, 6]])
+
+np.vstack()
+>>>
+array([[1],
+       [2],
+       [3],
+       [4],
+       [5],
+       [6]])
