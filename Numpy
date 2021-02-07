@@ -39,6 +39,11 @@ y = np.repeat(x,7,axis = 0)
 
 #5. np.sum(연산할놈, axis = 0,1방향으로. ,keepdims = True,False) # keepdims하면sum하면서도 dimension이 바뀌지 않음.
 
+# np.sum에대한 새로운 해석
+a.shape --> (X,Y,Z)
+np.sum(a, axis = 1)이면 1번째 축이 사라짐.--> (X,Z)
+np.sum(a, axis = 0)이면 0번째 축이 사라짐.--> (Y,Z)
+
 #6. 깊은복사, 얕은복사
 #파이썬에서 얕은 복사는 그냥 할당. b = a 그런데 
 import copy 
