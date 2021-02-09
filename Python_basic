@@ -34,3 +34,13 @@ print("gang")
   
 #5. 클래스 상속 class
 class 자식클래스(부모클래스): # 하면 상속됨.
+
+#6. 재귀함수
+
+def countdown(n):
+    if n == 0:
+        print("Blastoff!")
+    else:
+        print(n)
+        countdown(n-1)
+countdown(3)
