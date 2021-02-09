@@ -138,3 +138,9 @@ df
 2	NaN
 ..
 막 이렇게 뜰것.
+
+#18. Series에서 평균값 구하기 Series.mean()
+Series에게 .average()는 통하지 않음. mean()으로 해야함.
+cf) python, numpy
+#python --> sum(list)/len(list) # average함수 
+#numpy --> array.mean() np.array([1,2,3]).mean() --> 2.0
