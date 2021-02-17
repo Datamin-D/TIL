@@ -81,6 +81,13 @@ df['Birth'] = pd.to_datetime(df['Birth'], format='%Y-%m-%d %H:%M:%S', errors='ra
 #참고
 #https://m.blog.naver.com/PostView.nhn?blogId=wideeyed&logNo=221603462366&proxyReferer=https:%2F%2Fwww.google.com%2F
 
+#12 -2 datetime 연산
+
+#1)  pd.to_datetime(df컬럼) #datetime타입으로 바꿔주기
+#2) pd.DateOffset(weeks/months/days = n)으로 연산가능
+released_date_code['Released_date'][0] + pd.DateOffset(weeks=1)
+
+
 #13. pandas 행 개수 세기
 len(Series) #하면 간단히 세기 가능.
 
