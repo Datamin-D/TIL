@@ -15,7 +15,7 @@ plt.rc('figure', titlesize=BIGGER_SIZE) # fontsize of the figure title
 
 #2. plt.subplots
 여러 그래프 그릴 수 있음.
-fig, ax = plt.subplots(1, 3) #plt.subplots(행,열)는 fig, ax를 반환. ax는 리스트형태.
+fig, ax = plt.subplots(1, 3) #plt.subplots(행,열)는 fig, ax를 반환. ax는 리스트형태. 각 액자를 담고있음
 
 # 가로20, 세로10인 큰 액자 안에, 1행 3열로 액자들을 그리기 예제
 fig, ax = plt.subplots(1, 3, figsize=(20, 10))
