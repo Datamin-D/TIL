@@ -21,7 +21,7 @@ fig, ax = plt.subplots(1, 3) #plt.subplots(행,열)는 fig, ax를 반환. ax는 
 fig, ax = plt.subplots(1, 3, figsize=(20, 10))
 
 # 각 액자들에 그래프를 그린다.
-ax[0].plot([1,2,3],[1,2,3], )
+ax[0].plot([1,2,3],[1,2,3], ) #.plot([x축값들],[y축값들])
 ax[1].bar([1,2,3],[1,2,3])
 ax[2].pie([1,2,3])
 
