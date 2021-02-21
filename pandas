@@ -152,3 +152,7 @@ Series에게 .average()는 통하지 않음. mean()으로 해야함.
 cf) python, numpy
 #python --> sum(list)/len(list) # average함수 
 #numpy --> array.mean() np.array([1,2,3]).mean() --> 2.0
+
+#19. .count()
+ count()는 Null 값이 아닌 행(count Non-null rows)만 세며,
+출처: https://rfriend.tistory.com/450 [R, Python 분석과 프로그래밍의 친구 (by R Friend)]
