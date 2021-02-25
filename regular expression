@@ -23,3 +23,5 @@ df.col.str.extract('정규표현식 패턴') 쓰면 패턴에 맞는 문자만 �
 #5. re.sub('패턴', '바꿀문자열', '문자열', 바꿀횟수)
 re.sub('apple|orange', 'fruit', 'apple box orange tree')
 >>'fruit box fruit tree'
+re.sub('[0-9]+', 'n', '1 2 Fizz 4 Buzz Fizz 7 8')    # 숫자만 찾아서 n으로 바꿈
+>>> 'n n Fizz n Buzz Fizz n n'
