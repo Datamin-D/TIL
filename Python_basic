@@ -49,3 +49,6 @@ countdown(3)
 string = '보자보자'
 string.ljust(6,'=')
 ==> 보자보자==
+
+#7. string.isupper() string.islower()
+--> string이 대문자인지 소문자인지 T/F값 리턴
