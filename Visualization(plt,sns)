@@ -29,3 +29,10 @@ plt.show()
 
 #3. boxplot(data, labels = [''],showmeans = True ) # labels = ['boxplot들의 x값 레이블. box 개수와 동일해야함.'], showmeans = True) 
 #showmeans 하면 평균 세모로 보여줌
+
+#4. from wordcloud import WordCloud
+cloud = WordCloud(width = ,height = ).generate(text) # text에 pandas series같은거로 나오면 WordCloud().generate(" ".join(df['해당컬럼'])) 으로 둬도  
+plt.figure(figsize = (20,15))
+plt.imshow(cloud)
+plt.axis('off') #axis 없애기 
+
