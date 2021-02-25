@@ -44,3 +44,8 @@ def countdown(n):
         print(n)
         countdown(n-1)
 countdown(3)
+
+# 6. ljust,rjust string.ljust(칸수,'채울값') 칸수 확보후 왼쪽부터 string, 채울값으로 채움.
+string = '보자보자'
+string.ljust(6,'=')
+==> 보자보자==
