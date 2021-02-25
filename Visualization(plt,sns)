@@ -26,3 +26,6 @@ ax[1].bar([1,2,3],[1,2,3])
 ax[2].pie([1,2,3])
 
 plt.show()
+
+#3. boxplot(data, labels = [''],showmeans = True ) # labels = ['boxplot들의 x값 레이블. box 개수와 동일해야함.'], showmeans = True) 
+#showmeans 하면 평균 세모로 보여줌
