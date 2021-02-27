@@ -117,3 +117,16 @@ array([[1],
 # 9. np.percentile(array_like,백분위)
 random = np.random.rand(5)
 np.percentile(random, 50)
+
+#10 np.newaxis
+# np.newaxis는 np 차원을 늘려줌.
+# make it as row vector by inserting an axis along first dimension
+In [9]: row_vec = arr[np.newaxis, :]
+In [10]: row_vec.shape
+Out[10]: (1, 4)
+
+# make it as column vector by inserting an axis along second dimension
+# In [11]: col_vec = arr[:, np.newaxis]
+# In [12]: col_vec.shape
+# Out[12]: (4, 1)
+# https://azanewta.tistory.com/3
