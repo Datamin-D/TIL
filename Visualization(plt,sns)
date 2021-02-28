@@ -36,3 +36,13 @@ plt.figure(figsize = (20,15))
 plt.imshow(cloud)
 plt.axis('off') #axis 없애기 
 
+# 5. Kurtosis, skewness 확인. 정규분포, probability distribution
+
+
+#Histogram - Kurtosis and skewness.
+sns.distplot(df_train['SalePrice'], fit=norm); # a plot with normal distribution 정규분포 같이 그리기
+
+#Normal probability plot - Data distribution should closely follow the diagonal that represents the normal distribution.
+fig = plt.figure()
+res = stats.probplot(df_train['SalePrice'], plot=plt)
+
