@@ -12,3 +12,20 @@ Bivariate analysis is used to find out if there is a relationship between two di
  
 Multivariate Analysis
 Multivariate analysis is the analysis of three or more variables.  There are many ways to perform multivariate analysis depending on your goals.  Some of these methods include:
+
+1. 이분산성
+
+
+
+오차의 제곱의 평균(평균 제곱 오차)이 상수일 때를 동분산성(homoscedasticity)이라고 한다.
+
+표본이 분산된(spread, scedasticity) 정도가  동일한(equal) 경우를 말한다. 이 경우에는 독립변수 X와 상관없이 어느 곳에서나 평균제곱오차가 동일하다.
+
+동분산이 결여된 경우를 이분산성(heteroscedasticity)이라고 한다(위키백과). 즉 표본이 분산되어 있는 정도가 독립변수에 따라 달라지는 경우를 의미한다.
+
+식에서 단 한 가지 달라진 점이 있는데, 시그마(σ)에 아래 첨자 i가 붙어 있다는 점이다. 이것은 표본이 분산되는 정도가 독립변수 X에 따라서 달라진다는 것을 보여준다.
+
+Gujarati & Porter, 366의 그림 11.1과 11.2는 양자의 차이를 잘 보여주고 있다. 저축(saving)의 경우 소득(income)이 높아질수록 변동성이 높아진다고 알려져 있는데 이분산성을 잘 보여주는 사례이다.
+
+동분산은 고전 계량경제 모형의 기본 가정 중 하나인데, 이것이 성립되지 않는 경우 다양한 문제가 발생할 수 있다. 동분산은 회귀분석뿐 아니라 분산분석(analysis of variance)에서도 중요한 가정 중 하나이다.
+https://m.blog.naver.com/PostView.nhn?blogId=cto_hwangga&logNo=221092611528&proxyReferer=https:%2F%2Fwww.google.com%2F
