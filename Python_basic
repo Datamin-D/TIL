@@ -34,7 +34,16 @@ print("gang")
   
 #5. 클래스 상속 class
 class 자식클래스(부모클래스): # 하면 상속됨.
+  
+  #1) 오버라이딩
+  오버라이드(Override)
+  : 같은 이름을 가진 메소드를 덮어쓴다는 뜻
+출처: https://rednooby.tistory.com/55 [개발자의 취미생활]
+  
+  #2) 
 
+  
+  
 #6. 재귀함수
 
 def countdown(n):
