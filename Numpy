@@ -130,3 +130,6 @@ Out[10]: (1, 4)
 # In [12]: col_vec.shape
 # Out[12]: (4, 1)
 # https://azanewta.tistory.com/3
+
+#11. about axis.
+https://webnautes.tistory.com/1392
