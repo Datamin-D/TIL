@@ -65,3 +65,6 @@ top_right = bsObj.find("div",{"class":"area_links"}) // area_links라는 클래�
 #print(top_right) // 출력
 first_a = top_right.find("a") // 'a'태그를 가진 코드를 출력
 print(first_a.text) // 'a'태그를 가진 코드 중 텍스트만 출력
+
+#6. 뒤로가기
+wd.back()
