@@ -156,3 +156,7 @@ cf) python, numpy
 #19. .count()
  count()는 Null 값이 아닌 행(count Non-null rows)만 세며,
 출처: https://rfriend.tistory.com/450 [R, Python 분석과 프로그래밍의 친구 (by R Friend)]
+
+#20. Instead of using double indexing, Use .loc
+df['a_col']['b_col'] 해서 자료 접근하면 result는 같음. 그런데 값을 바꾸지는 못함. (이유는 아래)
+https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
