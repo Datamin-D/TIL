@@ -1,0 +1,5 @@
+# 1. Beep sound when ths cell's done
+
+# Play an audio beep. Any audio URL will do.
+from google.colab import output
+output.eval_js('new Audio("https://upload.wikimedia.org/wikipedia/commons/0/05/Beep-09.ogg").play()')
