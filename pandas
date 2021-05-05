@@ -160,3 +160,12 @@ cf) python, numpy
 #20. Instead of using double indexing, Use .loc
 df['a_col']['b_col'] 해서 자료 접근하면 result는 같음. 그런데 값을 바꾸지는 못함. (이유는 아래)
 https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+#21. 행 삽입하는 코드
+
+idx = 9 ## 원하는 인덱스
+
+temp1 = ev_df[ev_df.index < idx]
+temp2 = ev_df[ev_df.index >= idx]
+ev_df = temp1.append(r12,ignore_index=True).append(temp2, ignore_index=True)
+
