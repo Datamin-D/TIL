@@ -67,3 +67,6 @@ a = "123"
 b = "456"
 "-".join([a,b])
 #'123-456'
+
+# 판다스 loc을 활용한 object도 가능,.
+#" ".join(review_df.loc[[0,1],'comment'])
