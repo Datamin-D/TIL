@@ -1,4 +1,6 @@
 #1. Min_Max_Scaler
+# 컬럼 별 값을 0~1로 반환 시켜줌.
+
 #example
 # x_test minmax scaling
 scaler = MinMaxScaler()
