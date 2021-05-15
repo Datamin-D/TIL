@@ -70,3 +70,10 @@ b = "456"
 
 # 판다스 loc을 활용한 object도 가능,.
 #" ".join(review_df.loc['comment'])
+
+#9. Beep 음 비프음
+import winsound as sd
+fr = 130
+dr = 1001
+sd.Beep(fr,dr) # 내가 좋아하는 톤
+
