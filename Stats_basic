@@ -29,3 +29,14 @@ Gujarati & Porter, 366의 그림 11.1과 11.2는 양자의 차이를 잘 보여�
 
 동분산은 고전 계량경제 모형의 기본 가정 중 하나인데, 이것이 성립되지 않는 경우 다양한 문제가 발생할 수 있다. 동분산은 회귀분석뿐 아니라 분산분석(analysis of variance)에서도 중요한 가정 중 하나이다.
 https://m.blog.naver.com/PostView.nhn?blogId=cto_hwangga&logNo=221092611528&proxyReferer=https:%2F%2Fwww.google.com%2F
+
+2. 다중공선성 multicollinearity
+독립변수가 종속변수의 분산을 설명하는 부분이 겹칠때.
+기본설명:
+https://www.youtube.com/watch?v=7EiN3NVmbMo&t=331s
+
+Necessity of Dummy vars:
+https://www.coursera.org/lecture/linear-regression-business-statistics/dummy-variable-regression-extension-to-multiple-categories-jkY8O
+
+LR할때는 변수n-1 인코딩 필요. But.. 변수가 one-hot encoding아니고 multi category & 중복 가능하다면?
+--> Stackoverflow 
