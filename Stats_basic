@@ -38,5 +38,6 @@ https://www.youtube.com/watch?v=7EiN3NVmbMo&t=331s
 Necessity of Dummy vars:
 https://www.coursera.org/lecture/linear-regression-business-statistics/dummy-variable-regression-extension-to-multiple-categories-jkY8O
 
-LR할때는 변수n-1 인코딩 필요. But.. 변수가 one-hot encoding아니고 multi category & 중복 가능하다면?
+LR할때는 변수n-1 인코딩 필요. To prevent Dummy Variables Trap in LR
+But.. 변수가 one-hot encoding아니고 multi category & 중복 가능하다면?
 --> Stackoverflow 
