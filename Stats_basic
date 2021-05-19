@@ -41,3 +41,10 @@ https://www.coursera.org/lecture/linear-regression-business-statistics/dummy-var
 LR할때는 변수n-1 인코딩 필요. To prevent Dummy Variables Trap in LR
 But.. 변수가 one-hot encoding아니고 multi category & 중복 가능하다면?
 --> Stackoverflow 
+
+3. 상관 계수.
+pearson 상관계수가 일반적으로 많이 쓰인다 함.
+pandas 에서도 확인가능.
+
+df.corr(method = 'pearson')
+df.corr(method = 'pearson').loc['rv','ticket_sold'] # 와 같이.
