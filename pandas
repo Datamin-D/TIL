@@ -169,3 +169,7 @@ temp1 = ev_df[ev_df.index < idx]
 temp2 = ev_df[ev_df.index >= idx]
 ev_df = temp1.append(r12,ignore_index=True).append(temp2, ignore_index=True)
 
+#22. 결측치 있는 행, 열 제거
+df.dropna(axis = 0) # 행 제거
+df.dropna(axis = 1) # 열 제거
+
