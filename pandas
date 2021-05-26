@@ -173,3 +173,5 @@ ev_df = temp1.append(r12,ignore_index=True).append(temp2, ignore_index=True)
 df.dropna(axis = 0) # 행 제거
 df.dropna(axis = 1) # 열 제거
 
+#23. 리스트 포함한 df를 to_csv로 저장하면 안돼. str로 깨짐.
+pickle 로 저장하면 
