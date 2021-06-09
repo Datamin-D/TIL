@@ -191,3 +191,7 @@ group.sum group.mean group.size 모두
 
 출처: https://rfriend.tistory.com/383 [R, Python 분석과 프로그래밍의 친구 (by R Friend)]
 https://rfriend.tistory.com/383
+
+#25. 한번에 df 컬럼들 type 바꾸기
+df.astype('float') #모든열
+df.astype({'컬럼명':dtype}) #특정열의 data type바꾸기
