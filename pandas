@@ -195,3 +195,10 @@ https://rfriend.tistory.com/383
 #25. 한번에 df 컬럼들 type 바꾸기
 df.astype('float') #모든열
 df.astype({'컬럼명':dtype}) #특정열의 data type바꾸기
+
+#26. 실수로 리스트 csv로 저장. string to list
+import ast
+x = '[ "A","B","C" , "D"]'
+
+x = ast.literal_eval(x)
+x #리스트로 잘 바뀜
