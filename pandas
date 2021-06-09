@@ -89,6 +89,15 @@ released_date_code['Released_date'][0] + pd.DateOffset(weeks=1)
 
 https://tariat.tistory.com/631 참조
 
+#12 - 3 datetime pd.read_csv읽어올때 인식도 가능
+df = pd.read_csv('diabetes.csv',parse_dates=["date"]) # 가령 이런식으로 date가 있는 컬럼을 지정해줘도 나중에
+# 연도 컬럼 전처리
+df["year"] = df['date'].dt.year
+df["month"] = df['date'].dt.month
+df["hour"] = df['date'].dt.hour
+# 이런거 가능.
+
+
 #13. pandas 행 개수 세기
 len(Series) #하면 간단히 세기 가능.
 
