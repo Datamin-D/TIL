@@ -46,3 +46,23 @@ sns.distplot(df_train['SalePrice'], fit=norm); # a plot with normal distribution
 fig = plt.figure()
 res = stats.probplot(df_train['SalePrice'], plot=plt)
 
+
+#6. 한글폰트 코랩에서
+
+#설치
+!sudo apt-get install -y fonts-nanum
+!sudo fc-cache -fv
+!rm ~/.cache/matplotlib -rf
+
+#폰트
+plt.rc('font', family='NanumBarunGothic') 
+
+#안되면
+#설치된 폰트 확인
+import matplotlib.font_manager as fm
+font_list = [font.name for font in fm.fontManager.ttflist]
+font_list
+
+
+#폰트
+plt.rcParams['font.family'] = 'NanumBarunGothic' #히트맵은 잘됨
