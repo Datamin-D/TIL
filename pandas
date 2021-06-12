@@ -202,3 +202,12 @@ x = '[ "A","B","C" , "D"]'
 
 x = ast.literal_eval(x)
 x #리스트로 잘 바뀜
+
+#27 날짜컬럼 처리
+pd.to_datetime(df['date컬럼']) #해당 date 컬럼을 datetime으로 인식
+
+#tip! date컬럼 기준으로 merge하면 date컬럼 인식 다시 해줘야함.
+df_merged = pd.merge(df1,df2,on = 'date', how = 'left') #후에 datetime으로 바꿔주기
+df_merged['date'] = pd.to_datetime(df_merged['date'])
+
+
