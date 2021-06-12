@@ -66,3 +66,10 @@ font_list
 
 #폰트
 plt.rcParams['font.family'] = 'NanumBarunGothic' #히트맵은 잘됨
+
+#여러번 쓸거면 코랩에서 드라이브에 넣기.
+from matplotlib import font_manager, rc
+
+# os.chdir('경로')
+# font_name = font_manager.FontProperties(fname="NanumGothic.ttf").get_name()
+# rc('font', family=font_name)
