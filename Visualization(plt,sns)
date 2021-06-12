@@ -73,3 +73,6 @@ from matplotlib import font_manager, rc
 # os.chdir('경로')
 # font_name = font_manager.FontProperties(fname="NanumGothic.ttf").get_name()
 # rc('font', family=font_name)
+
+#참조
+#https://colab.research.google.com/github/nicewook/datascience_exercise/blob/master/korean_font_on_matplotlib.ipynb#scrollTo=xB0e99-Wy6kO
