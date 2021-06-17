@@ -83,7 +83,9 @@ df['Birth'] = pd.to_datetime(df['Birth'], format='%Y-%m-%d %H:%M:%S', errors='ra
 
 #12 -2 datetime 연산
 
-#1)  pd.to_datetime(df컬럼) #datetime타입으로 바꿔주기
+#1)  pd.to_datetime(df컬럼) #datetime타입으로 바꿔주기 
+df['date'] = pd.to_datetime(df['date'])
+
 #2) pd.DateOffset(weeks/months/days = n)으로 연산가능
 released_date_code['Released_date'][0] + pd.DateOffset(weeks=1)
 
@@ -210,4 +212,5 @@ pd.to_datetime(df['date컬럼']) #해당 date 컬럼을 datetime으로 인식
 df_merged = pd.merge(df1,df2,on = 'date', how = 'left') #후에 datetime으로 바꿔주기
 df_merged['date'] = pd.to_datetime(df_merged['date'])
 
+#27. 
 
