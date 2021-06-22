@@ -86,3 +86,9 @@ df['col'].hist(bins = 100)
 
 #8. yscale # 보여지는 값을 스케일링 해줌. 
 plt.yscale('log', nonposy='clip') # nonposy = 'clip' => non-positive 값을 아주 작은 값으로 자름. 
+
+#9. plt.plot 으로 직선/곡선 그리기
+plt.plot([1, 2, 3, 4], [1, 4, 9, 16]) #plt.plot([x축 값들], [x축에 대응되는 y축값])
+
+#10 plt.legend(loc = 'upper right', fontsize = 15) #plt.legend(loc = '위치', fontsoze = 글씨 크기)
+
