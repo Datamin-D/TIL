@@ -77,3 +77,12 @@ from matplotlib import font_manager, rc
 #참조
 #https://colab.research.google.com/github/nicewook/datascience_exercise/blob/master/korean_font_on_matplotlib.ipynb#scrollTo=xB0e99-Wy6kO
 #이대로 해도 안되면 껐다 켜야함. 코랩이던 뭐던
+
+#7. histogram 그리기
+plt.hist(df['col'], bins = 100, label = 라벨)
+
+#이거도 가능
+df['col'].hist(bins = 100)
+
+#8. yscale # 보여지는 값을 스케일링 해줌. 
+plt.yscale('log', nonposy='clip') # nonposy = 'clip' => non-positive 값을 아주 작은 값으로 자름. 
