@@ -212,5 +212,5 @@ pd.to_datetime(df['date컬럼']) #해당 date 컬럼을 datetime으로 인식
 df_merged = pd.merge(df1,df2,on = 'date', how = 'left') #후에 datetime으로 바꿔주기
 df_merged['date'] = pd.to_datetime(df_merged['date'])
 
-#27. 
+
 
