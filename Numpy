@@ -133,3 +133,9 @@ Out[10]: (1, 4)
 
 #11. about axis.
 https://webnautes.tistory.com/1392
+
+#12. np.nan을 인식하는 법.
+대놓고 a가 nan 이라고 프린트해보면 뜨는데
+a == np.nan 하면  False가 뜬다.
+이런 경우에는 np.isnan(a)하면 된다.
+
