@@ -213,4 +213,6 @@ df_merged = pd.merge(df1,df2,on = 'date', how = 'left') #후에 datetime으로 �
 df_merged['date'] = pd.to_datetime(df_merged['date'])
 
 
-
+#28. One-hot Encoding
+one_hot_result_1=pd.get_dummies(hd['범주형변수 컬럼']) #N인코딩
+one_hot_result_1=pd.get_dummies(hd['범주형변수 컬럼'],drop_first= True) # N-1인코딩
