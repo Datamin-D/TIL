@@ -92,3 +92,12 @@ plt.plot([1, 2, 3, 4], [1, 4, 9, 16]) #plt.plot([x축 값들], [x축에 대응�
 
 #10 plt.legend(loc = 'upper right', fontsize = 15) #plt.legend(loc = '위치', fontsoze = 글씨 크기)
 
+#11. 시계열 데이터 시각화
+이런식으로 시간별로 pred, answer 값 시각화
+plt.plot(range(50), df_test['정답 컬럼'], linestyle='-', marker='*', color='r')
+plt.plot(range(50), df_pred, linestyle='-', marker='.', color='b')
+plt.legend(['Actual','Predicted'], loc=2)
+plt.title('Actual vs Predicted Air Pressure')
+plt.ylabel('Air Pressure')
+plt.xlabel('Index')
+
