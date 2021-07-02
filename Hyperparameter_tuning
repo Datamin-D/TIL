@@ -20,4 +20,6 @@ grid_search = GridSearchCV(estimator = regressor, param_grid = rf_param_grid,
 grid_search.fit(x_train,y_train)
 grid_search.best_params_
 
-#2. Coarse
+[NN 기반.]
+좁은 레인지에 값이 다닥다닥 붙어있고 성능은 안좋을때.. 
+--> Epoch 수를 충분히 줘봤는지 Check. 학습이 충분히 되기전에 끝냈을 확률이 높음. (RNN 계열 감성분석하다 발견)
