@@ -3,7 +3,7 @@
 
 #example
 # x_test minmax scaling
-scaler = MinMaxScaler()
+scaler = MinMaxScaler() # # MinMaxScaler(feature_range = (최소,최대)) 오...이렇게 범위 줄 수도 있음.
 scaled = scaler.fit_transform(x_test) #dataframe을 input으로 받고 array를 반환함.
 
 df_scaled = pd.DataFrame(data = scaled, columns = x_test.columns)
