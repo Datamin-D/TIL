@@ -29,6 +29,7 @@ plt.show()
 
 #3. boxplot(data, labels = [''],showmeans = True ) # labels = ['boxplot들의 x값 레이블. box 개수와 동일해야함.'], showmeans = True) 
 #showmeans 하면 평균 세모로 보여줌
+sns.boxplot(x = df['col1'], y = df['col2']) #이렇게 하면 x값들 별로 y 값의 boxplot이 만들어짐. 각 컬럼의 분포 볼 때 좋음.
 
 #4. from wordcloud import WordCloud
 cloud = WordCloud(width = ,height = ).generate(text) # text에 pandas series같은거로 나오면 WordCloud().generate(" ".join(df['해당컬럼'])) 으로 둬도  
