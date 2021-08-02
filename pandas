@@ -13,9 +13,9 @@ first argument must be an iterable of pandas objects, you passed an object of ty
 
   #맞는 코드
   pd.concat([df1,df2],axis = 1) #옆으로 붙임
-  pd.concat([df1,df2],axis = 0) #밑에다 붙임.
+  pd.concat([df1,df2],axis = 0) #밑에다 붙임. 
 
-# * pd.concat([],axis = 1)로 합칠 때 합치는 기준은 index임.  
+# * pd.concat([],axis = 1)로 합칠 때 합치는 기준은 index임.  # 그냥 직관적으로 옆으로 갖다 붙이고 싶으면 reset index를 권함.
 # 물론 pd.concat([df1,df2],ignore_index = True,axis = 1) 옵션을 주면 말그대로 옆으로 그냥 갖다붙임. 그러나 컬럼 이름이 0,1,2,..로 변해버림
 # = pd.concat([df_5, df_6], keys=['df_5', 'df_6'], names=['df_name', 'row_number']) 같이 names = 를 통해 컬럼 이름을 주면 됨.
 
