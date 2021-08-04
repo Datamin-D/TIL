@@ -4,5 +4,6 @@ https://deep-eye.tistory.com/7
 
 2. 가상환경의 쥬피터랩
 pip install jupyterlab # 으로 설치
-jupyter lab #으로 실행
+conda install  ipykernel # 커널설치
+jupyter lab #으로 실행. 안되면 위 두 순서 바꿔보기
 
