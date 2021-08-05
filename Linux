@@ -5,3 +5,11 @@ put lsb_release -a in terminal
 #2. 복붙
 ctrl + insert 복사
 shift + insert 붙여넣기
+
+#3. 가상환경으로 tf2 설치
+
+# 참고
+https://go-hard.tistory.com/51
+
+# nvdia driver 설치 관련
+https://go-hard.tistory.com/51
