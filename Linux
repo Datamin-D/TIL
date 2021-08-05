@@ -1,4 +1,7 @@
+---ubuntu--
 #1. Checking Linux version 
 put lsb_release -a in terminal
 
-#2.
+#2. 복붙
+ctrl + insert 복사
+shift + insert 붙여넣기
