@@ -14,3 +14,24 @@ https://saehunkimguitar.tistory.com/6
 
 # nvdia driver 설치 관련
 https://go-hard.tistory.com/51
+
+#4. 우분투 업데이트 후, GPU 소프트웨어 설치 시 (NVIDIA) 생긴 문제 해결법
+이틀동안 해맸지만.. 결국 답은 아래
+
+ctrl + alt + t 혹은 ctrl + alt +f1 버튼을 눌러 터미널로 들어가고
+ 
+$sudo service lightdm stop
+
+$rm ~/.config/dconf/user
+
+$sudo service lightdm start
+
+ 
+
+재부팅하고 화면 잘 나옴...ㅠㅡㅠ
+ 
+만약 키보드 마우스 안된다면 아래 코드를 써보는 걸 추천.
+
+$sudo apt-get install xserver-xorg-input-all
+
+$startx
