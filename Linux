@@ -39,3 +39,7 @@ $sudo service lightdm start
 $sudo apt-get install xserver-xorg-input-all
 
 $startx
+
+# 5. 파일 관리자 권한으로 삭제하는 법
+sudo rm -rf 디렉토리 #sudo 는 관리자 권한.
+
