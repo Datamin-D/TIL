@@ -16,8 +16,10 @@ https://saehunkimguitar.tistory.com/6
 # nvdia driver 설치 관련
 https://go-hard.tistory.com/51
 
-#20.04 시도중
+#20.04 
 https://webnautes.tistory.com/1428
+잘됨.. 그런데 최신 버전으로 다운받은 바람에, 해당 디렉토리와 버젼 이름은 맞게 수정해주면 문제 X
+GPU 3개 전부 인식 완료
 
 #4. 우분투 업데이트 후, GPU 소프트웨어 설치 시 (NVIDIA) 생긴 문제 해결법
 이틀동안 해맸지만.. 결국 답은 아래
