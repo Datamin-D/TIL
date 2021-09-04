@@ -19,3 +19,6 @@ SELECT *
 FROM TABLE
 WHERE COL1 >= '2010-01-01' AND COL1 <= '20'
 ORDER BY COL3 DESC; #default는 ASC 
+
+4. 기본 강의 목록
+https://sites.google.com/view/sqld/%ED%99%88
