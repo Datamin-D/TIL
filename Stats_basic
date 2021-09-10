@@ -48,3 +48,6 @@ pandas 에서도 확인가능.
 
 df.corr(method = 'pearson')
 df.corr(method = 'pearson').loc['rv','ticket_sold'] # 와 같이.
+
+4. 평균값보다 중간값을 보는이유.
+mean 보다 median은 극단적인 값에 덜 민감하기에.
