@@ -79,3 +79,27 @@ wd.back()
 하지만! Case by Case로 이는 문제가 될 수도 있습니다. 가끔은 위 사진과 같이 클래스가 두개로 뜨지만 데이터 별로 하나의 클래스만을 선택해야 원하는 데이터가 수집되는 경우도 있습니다.
 
 이는 select활용 시, ctrl + f로 실제로 태그가 잘 지정되었는지 확인하면 알 수 있습니다.
+
+#8. bs4 에서 select시 id, class의 교집합을 가져오기 fail
+bs4 버젼 문제임. 
+import bs4
+bs4.__version 해봐서
+4.6.3 나오면 안됐고
+4.9.3 이상은 잘됨 확인. 
+해결 방법:
+!pip uninstall beautifulsoup4 # 옛것 안녕
+!pip install beautifulsoup4 # 새것 어서오고
+
+#아래는 예시 코드
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+import bs4
+
+html = urlopen('http://www.pythonscraping.com/pages/page3.html')
+bs = BeautifulSoup(html, 'html.parser')
+
+# 태그의 class와 id 동시 탐색 시, select 사용 시
+table1=bs.select('table tr.gift#gift2')
+for tr in table1:
+    print("="*10)
+    print(tr.get_text()) 
