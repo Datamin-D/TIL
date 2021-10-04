@@ -1,0 +1,121 @@
+#1. train_test_split
+
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test = train_test_split(X,y,test_size=0.3)
+
+#2. DT classifier
+
+
+from sklearn.tree import DecisionTreeClassifier
+
+model = DecisionTreeClassifier(criterion = "entropy", max_depth=3)
+model.fit(x_train,y_train)
+y_pred = model.predict(x_test)
+
+from sklearn.metrics import accuracy_score
+
+accuracy_score(y_test, y_pred)
+
+# 3. DT classifier - evaluation metrics 
+
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
+print (' \n confusion_matrix of decision tree \n ')
+cm = confusion_matrix(y_test, y_pred)
+print (cm)
+print ('\n Here is the classification report:')
+print (classification_report(y_test, y_pred))
+
+
+# 4. Feature 중요도
+
+model.feature_importances_
+
+pd.DataFrame({'feature' : x_train.columns,
+              'importance' : model.feature_importances_})
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+dt_importances_values = model.feature_importances_
+dt_importances = pd.Series(dt_importances_values,index=x_train.columns  )
+dt_top20 = dt_importances.sort_values(ascending=False)[:20]
+
+plt.figure(figsize=(8,6))
+plt.title('Feature importances Top 20')
+sns.barplot(x=dt_top20 , y = dt_top20.index)
+plt.show()
+
+model.classes_
+
+
+#5 Random Forest
+
+from sklearn.ensemble import RandomForestClassifier
+clf_RF = RandomForestClassifier(n_estimators=10)
+clf_RF.fit(x_train, y_train)
+y_pred_RF = clf_RF.predict(x_test)
+
+#
+print (' \n confusion_matrix of random foreset \n ')
+cm = confusion_matrix(y_test, y_pred_RF)
+print (cm)
+print ('\n Here is the classification report:')
+print (classification_report(y_test, y_pred_RF))
+
+#
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+ftr_importances_values = clf_RF.feature_importances_
+ftr_importances = pd.Series(ftr_importances_values,index=x_train.columns )
+ftr_top20 = ftr_importances.sort_values(ascending=False)[:20]
+
+plt.figure(figsize=(8,6))
+plt.title('Feature importances Top 20')
+sns.barplot(x=ftr_top20 , y = ftr_top20.index)
+plt.show()
+
+#6.GBM(Gradient Boosting Machine)
+from sklearn.ensemble import GradientBoostingClassifier
+clf_GBM = GradientBoostingClassifier(random_state=0)
+clf_GBM.fit(x_train , y_train)
+y_pred_GBM = clf_GBM.predict(x_test)
+
+#
+print (' \n confusion_matrix of GBM \n ')
+cm = confusion_matrix(y_test, y_pred_GBM)
+print (cm)
+print ('\n Here is the classification report:')
+print (classification_report(y_test, y_pred_GBM))
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#
+ftr_importances_values = clf_GBM.feature_importances_
+ftr_importances = pd.Series(ftr_importances_values,index=x_train.columns )
+ftr_top20 = ftr_importances.sort_values(ascending=False)[:20]
+
+plt.figure(figsize=(8,6))
+plt.title('Feature importances Top 20')
+sns.barplot(x=ftr_top20 , y = ftr_top20.index)
+plt.show()
+
+# 6. DecisonTree 시각화
+
+from sklearn.tree import export_text
+r = export_text(model, feature_names=list(X.columns))
+print(r)
+
+dt1 = DecisionTreeClassifier(max_depth=3)
+dt1.fit(x_train,y_train)
+from sklearn.tree import export_graphviz
+
+# export_graphviz()의 호출 결과로 out_file로 지정된 tree.dot 파일을 생성함.
+export_graphviz(dt1, out_file="tree.dot", class_names='churn' , feature_names = X.columns, impurity=True, filled=True)
+import graphviz
+# 위에서 생성된 tree.dot 파일을 Graphviz 읽어서 Jupyter Notebook상에서 시각화
+with open("tree.dot") as f:
+    dot_graph = f.read()
+graphviz.Source(dot_graph)
