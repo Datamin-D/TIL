@@ -115,6 +115,8 @@ array([[1],
 
 # 8 - 2 np.concatenate
 만약 np array 1d끼리 합쳐서 2d를 만드려하면 안됨. vstack해주기.
+참조
+https://stackoverflow.com/questions/35401041/concatenation-of-2-1d-numpy-arrays-along-2nd-axis
 
 # 9. np.percentile(array_like,백분위)
 random = np.random.rand(5)
