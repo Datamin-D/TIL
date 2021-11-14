@@ -108,3 +108,10 @@ map( 값에 +1 을 더해주는 함수, [1,2,3,4,5])
 
 
 출처: https://blockdmask.tistory.com/531 [개발자 지망생]
+
+
+#14. Sparse Matrix 연산
+Sparse Matrix @ Dense Matrix 하면됨.
+# @은 행렬곱기호. Sparse Matrix도 recognize
+np.dot 은 Sparse Matrix연산을 수행하지 못함.@ 써야됨.
+https://ericmjl.github.io/blog/2016/7/24/sparse-matrix-multiplication-in-python-3/
