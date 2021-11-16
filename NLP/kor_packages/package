@@ -1,0 +1,8 @@
+#1. wordcloud
+한글 폰트 에러 시, 한글 이름으로 지정해서 그렇다.
+font_path = "맑은.ttf" #(X)
+font_path = "malgun.ttf" #(O)
+
+#2. konlpy, kss, hanspell 다운로드 법은 구귿드라이브 
+https://drive.google.com/drive/u/0/folders/1pQSYjDXvzcNnaozeGY4WFZOM4gqU-nDL
+'자연어처리'에 저장함.
