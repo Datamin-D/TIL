@@ -1,0 +1,49 @@
+# 1. train_test_split
+
+[모델]
+#2. NB
+# 나이브 베이지안 분류 모델 생성과 예측
+
+from sklearn.naive_bayes import MultinomialNB
+clf_NB = MultinomialNB().fit(X_train, y_train)
+y_predicted_NB = clf_NB.predict(X_test)
+
+#3. DT
+# 의사결정나무 분류 모델 생성과 예측
+
+from sklearn import tree
+clf_DT = tree.DecisionTreeClassifier().fit(X_train, y_train)
+y_predicted_DT = clf_DT.predict(X_test)
+
+#4.SGD
+
+#SGD 분류 모델 생성과 예측
+
+from sklearn.linear_model import SGDClassifier
+clf_SGD = SGDClassifier(alpha=.0001).fit(X_train, y_train)
+y_predicted_SGD = clf_SGD.predict(X_test)
+
+#5. SVM
+# SVM 모델 생성과 예측
+
+from sklearn.svm import LinearSVC
+clf_SVM = LinearSVC().fit(X_train, y_train)
+y_predicted_SVM = clf_SVM.predict(X_test)
+
+#6. RF
+# Random Forest 분류 모델 생성과 예측
+
+from sklearn.ensemble import RandomForestClassifier
+clf_RFA = RandomForestClassifier(n_estimators=10)
+clf_RFA.fit(X_train, y_train)
+y_predicted_RFA = clf_RFA.predict(X_test)
+
+# 평가
+
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
+print (' \n confusion_matrix NB \n ')
+cm = confusion_matrix(y_test, y_predicted_NB)
+print (cm)
+print ('\n Here is the classification report:')
+print (classification_report(y_test, y_predicted_NB))
