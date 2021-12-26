@@ -103,3 +103,11 @@ table1=bs.select('table tr.gift#gift2')
 for tr in table1:
     print("="*10)
     print(tr.get_text()) 
+    
+    
+#9. wd.click() 보다 좋은 것.
+
+    button_tag = "#content > div > div > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div > div.pd-g-product-finder.aem-GridColumn.aem-GridColumn--default--12 > div > div > div.pf-finder-v2__inner > div.pf-finder-v2__content > div.pf-finder-v2__content-cta.js-pf-cta-area > a"
+    button = wd.find_element_by_css_selector(button_tag)
+    
+    wd.execute_script("arguments[0].click();", button)
