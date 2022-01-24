@@ -233,4 +233,24 @@ df["col1"].progress_apply(lambda x : x*2) # that was easy
 # 32. df.drop_duplicates()
 df.drop_duplicates(['col']) # col에 중복인 행 제거하고 df 보여줌.
 
+#33. 리뷰를 문장으로 쪼개기. (doc2sent mention을 sentence로.)
+
+review_sents = pd.DataFrame(data = [], columns = temp_df.columns)
+review_sents
+
+
+#1) review_sents에 review 기본정보 sents 갯수만큼 추가
+def fill_df(row):
+  for i in range(len(row['ae_pre'])):
+    global review_sents
+    #2) sents 배치
+    sent = row['ae_pre'][i]
+    row['sent'] = sent
+    review_sents = review_sents.append(row)
+    
+ 
+
+temp_df.progress_apply(lambda row: fill_df(row),axis = 1)
+review_sents
+
 
