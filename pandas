@@ -230,4 +230,7 @@ df["col1"].progress_apply(lambda x : x*2) # that was easy
 이 에러는 판다스 버젼이 안맞는 것 끼리 작업해서 불러오려하면 생기는 에러.
 다이렉트로 pd 객체 말고 pickle 통해서 pd객체 옮겨올 때도 발생 할 수 있는 에러.
 
+# 32. df.drop_duplicates()
+df.drop_duplicates(['col']) # col에 중복인 행 제거하고 df 보여줌.
+
 
