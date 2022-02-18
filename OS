@@ -1,0 +1,19 @@
+import os
+
+#1. os 에 있는 모든 파일 읽기
+
+# 1-1 csv pandas로 읽기
+
+
+
+# 1-2 pickle 파일 읽기
+
+os.chdir(r"C:\Users\ywy\Desktop\lg_data_all\web\mention")
+os.listdir()
+
+web = pd.DataFrame()
+for pickl in os.listdir():
+    with open(pickl,'rb') as fr:
+        df = pickle.load(fr)
+        
+    web = pd.concat([web,df])
