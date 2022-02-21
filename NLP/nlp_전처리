@@ -25,6 +25,10 @@ tqdm.pandas()
 
 
 ## http없애기, 이스케이프시퀀스들 제거, 유니코드 변환
+import re
+from tqdm import tqdm
+tqdm.pandas()
+
 def remove_link_punc_unicode(string):
   # removing links # 정상 작동
   temp_string = re.sub('http[s]?://(?:[a-zA-Z]|[0–9]|[$-_@.&+]|(?:%[0–9a-fA-F][0–9a-fA-F]))+', ' ', string)
@@ -43,9 +47,10 @@ def remove_link_punc_unicode(string):
 
   return clean_string
   
-  
 
 review_sents['remove_link_punc'] = review_sents['sent'].progress_apply(lambda customer_sents: remove_link_punc_unicode(customer_sents)) 
+  
+  
 
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
