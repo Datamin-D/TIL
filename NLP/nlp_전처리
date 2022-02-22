@@ -28,27 +28,42 @@ tqdm.pandas()
 import re
 from tqdm import tqdm
 tqdm.pandas()
+import re
+from tqdm import tqdm
+tqdm.pandas()
+
+link_list = [".com/",".net/",".ly/"".tt/",".me/",".gl/",".lc/",".za/",".to/",".co/",".ke/",".vn/","index.php",".ps",".eu/",".in/",".be/",".tt/", ".ru/", "source=", "ref="]
 
 def remove_link_punc_unicode(string):
   # removing links # 정상 작동
   temp_string = re.sub('http[s]?://(?:[a-zA-Z]|[0–9]|[$-_@.&+]|(?:%[0–9a-fA-F][0–9a-fA-F]))+', ' ', string)
   
-  # get lost \n \t \v 
-  temp_string = re.sub("[\t\n\r\f\v]"," ",temp_string)
-
+  
+  for link in link_list:
+    pat = r"[a-zA-Z0-9\$-_@?.&+]+"+link+"[a-zA-Z0-9\$-_@?.&+]+"
+    temp_string = re.sub(pat, ' ', temp_string)
+    
   # get lost unicode  
   temp_string = temp_string.encode("ascii", "ignore").decode('utf-8')
+    
+  # get lost \n \t \v 
+  temp_string = re.sub(r"\\n"," ",temp_string)
+  temp_string = re.sub("[\t\n\r\f\v]"," ",temp_string)
+  
+
+
   # removing all everything except a-z english letters # 작동
   regex = re.compile('[^a-zA-Z]')
   temp_string = regex.sub(' ', temp_string)
 
-#   removing extra spaces #작동
+  #removing extra spaces #작동
   clean_string = re.sub(' +', ' ', temp_string).lower()
 
   return clean_string
   
 
 review_sents['remove_link_punc'] = review_sents['sent'].progress_apply(lambda customer_sents: remove_link_punc_unicode(customer_sents)) 
+
   
   
 
