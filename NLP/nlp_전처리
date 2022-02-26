@@ -47,10 +47,10 @@ def remove_link_punc_unicode(string):
   temp_string = temp_string.encode("ascii", "ignore").decode('utf-8')
     
   # get lost \n \t \v 
-  temp_string = re.sub(r"\\n"," ",temp_string)
-  temp_string = re.sub("[\t\n\r\f\v]"," ",temp_string)
-  
 
+  temp_string = re.sub(r"\\[rtnfv]|[\t\n\r\f\v]"," ",temp_string)
+  
+ 
 
   # removing all everything except a-z english letters # 작동
   regex = re.compile('[^a-zA-Z]')
