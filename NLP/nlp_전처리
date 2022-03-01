@@ -1,3 +1,52 @@
+#0. word 수 count for english
+
+#0-1. removing all everything except a-z english letters # 작동
+def engonly(string):  
+  string = str(string)
+  regex = re.compile('[^a-zA-Z]')
+  string = regex.sub(' ', string)
+  return string
+
+df['eda_sent'] = df['sent'].apply(lambda string: engonly(string))
+
+#0-2. tokenizing
+import nltk
+nltk.download('punkt')
+df['sent']
+def tokenize(text):   #Preprocessing
+    # tokenize into words
+    tokens = [word for sent in nltk.sent_tokenize(text) for word in nltk.word_tokenize(sent)] 
+    return tokens
+df['token'] = df['eda_sent'].apply(lambda text: tokenize(text))
+df['token']
+
+#0-3. token_len
+df['token_len'] = df['token'].apply(lambda x: len(x))
+print("median: ",df['token_len'].median())
+print("mean: ",df['token_len'].mean())
+
+#0-4. visualization
+import matplotlib.pyplot as plt
+
+# 그래프에 대한 이미지 사이즈 선언
+# figsize: (가로, 세로) 형태의 튜플로 입력
+plt.figure(figsize=(12, 5))
+# 히스토그램 선언
+# bins: 히스토그램 값들에 대한 버켓 범위
+# range: x축 값의 범위
+# alpha: 그래프 색상 투명도
+# color: 그래프 색상
+# label: 그래프에 대한 라벨
+plt.hist(df['token_len'], bins=200, alpha=0.5, color= 'r', label='word')
+plt.yscale('log', nonposy='clip')
+# 그래프 제목
+plt.title('Log-Histogram of length of sentence')
+# 그래프 x 축 라벨
+plt.xlabel('Length of review')
+# 그래프 y 축 라벨
+plt.ylabel('Number of review')
+
+
 #1. 표제어 추출 시 특정 단어가 분리될 때 합치는 법
 
 test1 =  ["네","고","왕", "좋다"] # 0,1,2번째 인덱스에 네,고,왕 발견. 잘못 표제어 추출됨.
