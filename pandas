@@ -253,4 +253,25 @@ def fill_df(row):
 temp_df.progress_apply(lambda row: fill_df(row),axis = 1)
 review_sents
 
+#34 엑셀 작성자들 파일 모으기, 1 표시 두번 이상인 것 
+
+new_df = pd.DataFrame(columns = aspect_terms.columns)
+aspects = ['classified1','classified2']
+# len(aspects)
+for aspect in aspects:
+  file_dir = '/gdrive/MyDrive/LG 플젝-민/topic 존재 확인/aspect term 추가/' + aspect
+  os.chdir(file_dir)
+
+  aspect_df = pd.DataFrame()
+
+  for file in os.listdir(): # 파일 합치기
+    temp = pd.read_excel(file,index_col = 0)
+    aspect_df = pd.concat([temp,aspect_df],axis = 0) # 작성자들 df 합치기
+  aspect_df = aspect_df[~aspect_df['new_aspect_term'].isna()] # 1표시된거만 남기기
+  group = aspect_df['aspect'].groupby(aspect_df['sim_words'])
+  new_aspect_terms = list(group.size()[group.size() >= 2].index) # 2번 이상 체크된 sim word 만 추리기
+  
+  new_df[aspect] = pd.Series(new_aspect_terms)
+  print('aspect: ',aspect, new_aspect_terms)
+
 
