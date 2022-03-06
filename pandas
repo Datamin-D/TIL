@@ -188,7 +188,7 @@ df.dropna(axis = 1) # 열 제거
 pickle 로 저장하면 됨
 
 # 24. groupby
-group = df['출력할col'].groupby(abalone['그룹지을col'])
+group = df['출력할col'].groupby(df['그룹지을col'])
 group.sum group.mean group.size 모두 
 
 출처: https://rfriend.tistory.com/383 [R, Python 분석과 프로그래밍의 친구 (by R Friend)]
