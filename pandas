@@ -284,3 +284,34 @@ for aspect in aspects:
   print('aspect: ',aspect, new_aspect_terms)
 
 
+#35. values to column
+https://stackoverflow.com/questions/26255671/pandas-column-values-to-columns 참조함.
+
+
+	source	YearQ	company
+0	Reddit	2021_4Q	lg
+1	Blog Post	2021_4Q	lg
+2	Forums	2021_4Q	lg
+3	Forums	2021_4Q	lg
+4	Forums	2021_4Q	lg
+
+-->이걸 source 가 컬럼으로 가게하고싶을때는 pivot table 쓰면됨.
+가령, source들의 count 값을 컬럼으로 보고싶다면
+df.pivot_table(values='company', index=df['YearQ'], columns='source', aggfunc='count')
+source	Blog Post	Facebook	Forums	Instagram	Reddit	Reviews	Twitter	Youtube
+YearQ								
+2019_1Q	312	886	493	35	218	4213	779	56
+2019_2Q	230	2107	498	52	216	4874	1167	61
+2019_3Q	201	1563	586	275	402	7747	1373	32
+2019_4Q	302	2526	475	123	631	3903	909	30
+2020_1Q	294	1420	414	138	479	3991	1090	52
+2020_2Q	155	2999	516	221	672	4933	1757	30
+2020_3Q	396	5035	638	1085	896	4875	9350	38
+2020_4Q	278	2066	590	182	724	5289	4680	50
+2021_1Q	335	1509	433	144	735	6178	2044	41
+2021_2Q	318	2389	583	265	900	8081	1957	65
+2021_3Q	370	4212	629	1131	1258	8181	2361	34
+2021_4Q	414	2274	520	378	991	6592	1555	29
+일케 간단하게 바꿀 수 있다.
+
+
