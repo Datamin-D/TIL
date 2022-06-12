@@ -102,3 +102,37 @@ plt.title('Actual vs Predicted Air Pressure')
 plt.ylabel('Air Pressure')
 plt.xlabel('Index')
 
+
+# 12. Radar Chart 그리는법
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# https://blog.naver.com/breezehome50/222305541524 참조
+# plotly도 올려놓음.
+
+cat = ['Happiness','Anger','Fear','Sadness','Disgust','Surprise']
+cat = [*cat, cat[0]]
+
+lg_score = [82,60,30,68,60,80]
+ss_score = [79,30,44,60,90,40]
+
+lg_score = [*lg_score,lg_score[0]]
+ss_score = [*ss_score,ss_score[0]]
+
+label_loc = np.linspace(start = 0, stop = 2*np.pi,num = len(lg_score))
+
+
+
+plt.figure(figsize = (8,8))
+ax = plt.subplot(polar = True)
+plt.xticks(label_loc,labels = cat, fontsize = 16)
+ax.plot(label_loc,lg_score, label = 'LG',linestyle = 'dashed', color = 'indianred')
+ax.fill(label_loc, lg_score, color = 'indianred', alpha = 0.3)
+
+ax.plot(label_loc,ss_score, label = 'SS',linestyle = 'dotted', color = 'skyblue')
+ax.fill(label_loc, ss_score, color = 'skyblue', alpha = 0.3)
+
+plt.figure(dpi=300)
+ax.legend(fontsize = 12)
+plt.show()
