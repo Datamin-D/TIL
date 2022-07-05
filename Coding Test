@@ -1,0 +1,12 @@
+#1. 리스트 append 복사되는 이유
+graph = [[]]*n # bad code
+
+for _ in range(2):
+  x,y = map(int,input().split()) # 1,2  3,4
+  graph[x].append(y)
+graph
+# [[2,4],[2,4]] #복사가 되어 버림.  
+
+graph = [[]]*n #대신
+graph = [[] for _ in range(2)] #쓰기.
+graph [[],[2],[],[4]] # 잘됨 
