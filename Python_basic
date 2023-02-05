@@ -115,3 +115,8 @@ Sparse Matrix @ Dense Matrix 하면됨.
 # @은 행렬곱기호. Sparse Matrix도 recognize
 np.dot 은 Sparse Matrix연산을 수행하지 못함.@ 써야됨.
 https://ericmjl.github.io/blog/2016/7/24/sparse-matrix-multiplication-in-python-3/
+
+#15. 현재 프로젝트에서 사용중인 라이브러리 내보내기
+
+#1) pip freeze 사용: 설치된 모든 라이브러리 가져옴.
+#2) pipreqs 사용 : 현재 플젝의 라이브러리만 가져옴.
