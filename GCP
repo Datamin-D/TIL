@@ -1,0 +1,10 @@
+Gcs cli 문
+
+1. GCS 에서 파일 한번에 다운로드 하는 방법
+c:\spsn>gsutil -m cp gs://ha-mktg-bc-spsn-data-gcs/collected_data/20230308-/*.pkl c:\cccc
+-m: multi thread (병렬로 받겠다.)
+cp : copy
+#현재경로> gsutil –m cp gcs경로 저장할 경로
+# 아래같이 저장할 경로를 . 두면 현재 경로로 다운로드하게됨.
+c:\spsn>gsutil -m cp gs://ha-mktg-bc-spsn-data-gcs/collected_data/20230308-/*.pkl . #
+
