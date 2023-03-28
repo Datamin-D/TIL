@@ -315,3 +315,15 @@ YearQ
 일케 간단하게 바꿀 수 있다.
 
 
+#36. reset_index 주의.
+
+#incorrect
+df_web[~df_web['sents'].isna()].reset_index(drop = True, inplace = True)
+일케 쓰면 안됨. 앞에는 df 가 새로운 형태로 나오는데, 이걸 다시 받아서 reset index해야만 기존 df 값이 바뀜.
+
+# correct
+df_web = df_web[~df_web['sents'].isna()]
+df_web.reset_index(drop = True, inplace = True)
+
+
+
