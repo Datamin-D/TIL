@@ -8,3 +8,11 @@ cp : copy
 # 아래같이 저장할 경로를 . 두면 현재 경로로 다운로드하게됨.
 c:\spsn>gsutil -m cp gs://ha-mktg-bc-spsn-data-gcs/collected_data/20230308-/*.pkl . #
 
+
+#2. GCS 에 파일 업로드 하는 방법
+# 웹에서 업로드하는 것보다 빠르다!
+
+# 터미널 환경 접긎
+# % gsutil cp 올릴파일주소 gs://업로드할 폴더 주소
+(base) minseong@seongmin-ui-MacBookPro 2. Data preprocessing % gsutil cp ./2016_20230331.pkl gs://bespin-test-bucket/ 
+
