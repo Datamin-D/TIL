@@ -326,4 +326,8 @@ df_web = df_web[~df_web['sents'].isna()]
 df_web.reset_index(drop = True, inplace = True)
 
 
+# 37. ISO 8601 기준에 맞춰 date year, week 추출
+
+df['week'] = df['snCreatedTime'].dt.isocalendar().week
+df['year'] = df['snCreatedTime'].dt.isocalendar().year
 
