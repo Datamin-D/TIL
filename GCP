@@ -16,3 +16,9 @@ c:\spsn>gsutil -m cp gs://ha-mktg-bc-spsn-data-gcs/collected_data/20230308-/*.pk
 # % gsutil cp 올릴파일주소 gs://업로드할 폴더 주소
 (base) minseong@seongmin-ui-MacBookPro 2. Data preprocessing % gsutil cp ./2016_20230331.pkl gs://bespin-test-bucket/ 
 
+
+#3. GCS 에 있는 파일 로컬에서 바로 읽는법.
+# google cloud cli 설치 후 
+# import gcsfs
+df = pd.read_pickle('gs://ha-mktg-bc-spsn-data-gcs/prediction/sentiment_analysis_df/2016_20230331_df_strong_sentiment_asp.pkl') 
+
