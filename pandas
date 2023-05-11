@@ -331,3 +331,14 @@ df_web.reset_index(drop = True, inplace = True)
 df['week'] = df['snCreatedTime'].dt.isocalendar().week
 df['year'] = df['snCreatedTime'].dt.isocalendar().year
 
+# 38 컬럼을 컬럼명,new rows로 나타내는법
+pd.melt(df, id_vars=[기준이 되는 컬럼(들)], value_vars='행으로 녹일 컬럼',
+       var_name = '녹인 컬럼의 new컬럼명', value_name = '녹인 컬럼 value의 new컬럼명')
+
+# 39 multi-hot encoded columns to new rows
+# pd.melt 활용
+
+melted_df = pd.melt(df, id_vars=[기준이 되는 컬럼(들)], value_vars='행으로 녹일 컬럼',
+       var_name = '녹인 컬럼의 new컬럼명', value_name = '녹인 컬럼 value의 new컬럼명')
+
+new_df = melted_df[melted_df['녹인 컬럼 value의 new컬럼명'] != 0].drop('녹인 컬럼 value의 new컬럼명, axis=1)
