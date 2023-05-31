@@ -9,6 +9,16 @@ cp : copy
 c:\spsn>gsutil -m cp gs://ha-mktg-bc-spsn-data-gcs/collected_data/20230308-/*.pkl . #
 
 
+1-2 여러파일 다운로드 방법
+
+#명령프롬프트 열고
+cloud init
+#작업원하는디렉토리로 ㄲ 하고
+
+#명령문
+(base) minseong@seongmin-ui-MacBookPro new collected data % gsutil -m cp -r gs://ha-mktg-bc-spsn-data-gcs/rsn-post-processing .
+
+
 #2. GCS 에 파일 업로드 하는 방법
 # 웹에서 업로드하는 것보다 빠르다!
 
