@@ -25,7 +25,9 @@ cloud init
 # 터미널 환경 접긎
 # % gsutil cp 올릴파일주소 gs://업로드할 폴더 주소
 (base) minseong@seongmin-ui-MacBookPro 2. Data preprocessing % gsutil cp ./2016_20230331.pkl gs://bespin-test-bucket/ 
-
+# 폴더명에 특수문자가 있는 경우, 업로드가 잘 안될 수 있음.
+#해결방법1. '파일명' 으로 올리기 
+#해결방법2. 특수기호대신 _ 쓰기.
 
 #3. GCS 에 있는 파일 로컬에서 바로 읽는법.
 # google cloud cli 설치 후 
